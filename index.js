@@ -2,7 +2,7 @@
 // Aasan lafzon mein, Data Structure woh framework hai jo data ko achi tarah organize karne mein madad karta hai taa keh humara software tezi se aur behtari se kaam kar sake.
 
 // Data Structure
-let StudentDataBase = ['Zain', 'Daniyal', 'Shahmeer', 'Hamza', 'Omais']
+// let StudentData = ['Zain', 'Daniyal', 'Shahmeer', 'Hamza', 'Omais']
 
 
 //Algorithum : A set of instructions that tells a computer how to do something, or you can also say step-by-step solution of the problem is called algorithum.
@@ -20,7 +20,7 @@ Chai ko cup mein daal lo.
 Yeh ek algorithm hai chai banane ka — har qadam tareeke se follow kiya jata hai taa keh chai ban sake. Algorithm ka maksad hota hai kisi bhi problem ko logical aur systematic tareeke se solve karna.
 */
 
-
+let StudentDataBase = ['Zain', 'Daniyal', 'Shahmeer', 'Hamza', 'Omais']
 // Algorithm for finding a specific user 
 // const findStudent = (allStudent, StudentName) => {
 //     for (let i = 0; i < allStudent.length; i++){
@@ -30,25 +30,21 @@ Yeh ek algorithm hai chai banane ka — har qadam tareeke se follow kiya jata ha
       
 //     }
 // }
-
 // findStudent(StudentDataBase,"Hamza")
 
 // What is BigO :
 // Big O  notations helps us understand how long an algorithum wil take to run or how much memory it will need as the amount of data it handles grows .
-
 /* 
 Aasan lafzon mein, Big O notation ek tareeqa hai jis se hum yeh samajhte hain keh kisi algorithm ko chalane mein kitna waqt (time) ya memory (space) lagegi jab hum data ka size barha den.
-
-
 Big O notation humay algorithms ko compare karne mein madad karta hai taa keh hum sabse efficient algorithm ko choose kar saken jo kam waqt mein kaam kar sake.
 */
 
 /*
 O(n):Signifies that the execution time of the algorithum grows linearly in proportion to the size of the input data(n) 
-O(n): Jab input size double hota hai, toh time bhi double hota hai. Isay Linear Time kehte hain.
+Jab input size double hota hai, toh time bhi double hota hai. Isay Linear Time kehte hain.
 */
 //Example : 
-// let groceries = ["milk", "bread", "eggs", "flour", "choose", "sugar"]
+// let groceries = ["milk", "bread", "eggs", "flour", "cheese", "sugar"]
 // const searchForItem = (item) => {
   //   for(let i = 0; i<groceries.length; i++){
     //     if(groceries[i] === item){
@@ -88,10 +84,9 @@ Example :
 
 /*  
 O(n²): indicates that the algorithum's execution time grows quadratically with the size of the input data (represented by n).
-O(n²): Jab input size double hota hai, toh time quadruple (4 guna) ho jata hai. Isay Quadratic Time kehte hain.
+Jab input size double hota hai, toh time quadruple (4 guna) ho jata hai. Isay Quadratic Time kehte hain.
 Example : 
 */
-
 function findPairs(arr) {
 
   // O(n²)
@@ -119,3 +114,12 @@ function findPairs(arr) {
 
 let number = [1,2,3,4,5];
 findPairs(number)
+
+
+
+
+/*
+O(log n) : 
+O(log n) time complexity refers to an algorithum's runtime that grows logarithmically with the size of the input (represented by n) . In simpler terms, as the input size increases, the time it takes for the algorithum to run increases slowly . 
+
+*/
