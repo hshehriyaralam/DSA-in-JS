@@ -9,31 +9,79 @@ let DSArray = ["a", 1 ,true, "b", 2 , false];
 let StringArr = ['a', 'b', 'c'];
 let numberArr = [1,2,3,4,5,6]
 let mixed = ['a', 2, true, undefined , null , {a:'a'}, ['b']];
-console.log("mixed", mixed);
+// console.log("mixed", mixed);
 
 
 
 
 // Custome Array 
-class MyArray {
-    constructor (){
+class CustomArray{
+    constructor(){
         this.length = 0;
-        this.data = []        
+        this.data = {};
+    }
+      // Custom get method 
+      get(index){
+        return this.data[index] 
     }
     push(item){
-        this.data[this.length] = item;
+        this.data[this.length] = item;   //"Array ke current length ke index par naya item assign karo."
+        // data :{this.length : 0 } = item
         this.length++;
         return this.length;
     }
-    display(){
-        console.log(`lenght: ${this.length}  Data: ${this.data}`);
+    pop(){
+        let lastItem = this.data[this.length -1]
+        // console.log("------------", lastIndex);
+        delete this.data[this.length -1];
+        this.length--;
+        return lastItem;
+    }
+    shift(){
+        let firstItem = this.data[0];
+        for(let i = 0; i<this.length - 1; i++){
+            this.data[i] = this.data[i + 1]
+        }
+        delete this.data[this.length - 1]
+        this.length--;
+        return firstItem;
+    }
+    unshift(item){
+        for(let i = this.length; i>0; i--){
+            this.data[i] = this.data[ i -1 ]
+        }
+        this.data[0] = item;
+        this.length++;
+        return this.length;
+    }
+    DeleteByIndex(index){
+        let DeleteBy = this.data[index]
+        
+        for(let i = index ; i < this.length - 1; i++){
+            this.data[i] = this.data[ i + 1];
+        }
+
+       delete this.data[this.length - 1]
+       this.length--;
+       return DeleteBy;
         
     }
 }
 
-let myNewArray = new MyArray()
-myNewArray.push('apple')
-myNewArray.push('mango')
-myNewArray.push('orange')
-myNewArray.push('banana')
-myNewArray.display()
+let myArray = new CustomArray();
+myArray.push("Shahmeer")
+myArray.push("Sherry")
+myArray.push("Zain")
+console.log(myArray);
+console.log(myArray.get(0))
+console.log(myArray.get(1))
+myArray.pop()
+console.log(myArray);
+myArray.shift()
+console.log(myArray);
+myArray.unshift("shahmeer")
+console.log(myArray);
+myArray.DeleteByIndex(1)
+console.log(myArray);
+
+
