@@ -12,7 +12,7 @@ let mixed = ['a', 2, true, undefined , null , {a:'a'}, ['b']];
 // console.log("mixed", mixed);
 
 
-
+    
 
 // Custome Array 
 class CustomArray{
@@ -32,7 +32,6 @@ class CustomArray{
     }
     pop(){
         let lastItem = this.data[this.length -1]
-        // console.log("------------", lastIndex);
         delete this.data[this.length -1];
         this.length--;
         return lastItem;
@@ -56,7 +55,6 @@ class CustomArray{
     }
     DeleteByIndex(index){
         let DeleteBy = this.data[index]
-        
         for(let i = index ; i < this.length - 1; i++){
             this.data[i] = this.data[ i + 1];
         }
@@ -69,9 +67,11 @@ class CustomArray{
 }
 
 let myArray = new CustomArray();
+
 myArray.push("Shahmeer")
 myArray.push("Sherry")
 myArray.push("Zain")
+myArray.push("Daniyal")
 console.log(myArray);
 console.log(myArray.get(0))
 console.log(myArray.get(1))
@@ -79,7 +79,7 @@ myArray.pop()
 console.log(myArray);
 myArray.shift()
 console.log(myArray);
-myArray.unshift("shahmeer")
+myArray.unshift("Hamza")
 console.log(myArray);
 myArray.DeleteByIndex(1)
 console.log(myArray);
